@@ -1,31 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int Somatorio1(){
-    int soma = 0;
-    for(int i = 0; i <= 10; i++){
-        soma +=i;
-    }
-    return soma;
-}
-int Somatorio2(){
-    int soma = 0;
-    for(int i = 0; i <= 10; i++){
-        soma = soma + 2*i;
-    }
-    return soma;
-}
-int Somatorio3(){
-    int soma = 0;
-    for(int i = 0; i <= 10; i++){
-        soma = soma + i*i;
-    }
-    return soma;
-}
-int Somatorio4(){
-    int soma = 0;
-    for(int i = 0; i <= 10; i++){
-        soma = soma + i*i*i;
-    }
-    return soma;
-}
+int main()
+{
+struct fracao {
+    int numerador, denominador;
+}f1,f2;
 
+f1.numerador = 10
+f1.denominador = 3
+f2.numerador = 5
+f2.denominador = 4
+
+char operacao;
+printf("Digite a operacao: ");
+scanf("%c", &operacao);
+if(operacao == "x"){
+    int numerador_mult
+    mdc(f1.denominador, f2.denominador);
+    mmc(f1.denominador, f2.denominador);
+    printf("%d/%d", )
+}
+}
+//Algoritmo de Euclides iterativo
+int mdc(int a, int b){
+while(b != 0){
+    int r = a % b;
+    a = b;
+    b = r;
+}
+return a;
+}
+int mmc(int a, int b){
+    return a * (b / mdc(a, b));
+}
